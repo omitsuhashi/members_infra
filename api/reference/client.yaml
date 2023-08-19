@@ -1,0 +1,42 @@
+openapi: 3.1.0
+x-stoplight:
+  id: fzoizbmayvcit
+info:
+  title: client
+  version: '1.0'
+  description: stamp system api for client
+  contact:
+    name: Osamu Mitsuhashi
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /user:
+    get:
+      summary: get-user-info
+      tags:
+        - info
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/user.yaml
+      operationId: get-user-info
+      description: get user info
+  /secure-token:
+    get:
+      summary: get-temporary-token
+      tags:
+        - info
+        - one-time
+      responses:
+        '200':
+          description: OK
+      operationId: get-secure-token
+      description: get secure token for showing qr-code etc.
+components:
+  schemas: {}
+tags:
+  - name: info
+  - name: one-time

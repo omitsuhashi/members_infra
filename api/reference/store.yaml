@@ -1,0 +1,27 @@
+openapi: 3.1.0
+x-stoplight:
+  id: dyu9q569hv9jq
+info:
+  title: store
+  version: '1.0'
+  contact:
+    name: Osamu Mitsuhashi
+  description: members system api for store clues
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /stamp:
+    post:
+      summary: stamp
+      tags:
+        - stamp
+      responses:
+        '200':
+          description: OK
+      operationId: stamp
+      description: add points
+components:
+  schemas: {}
+tags:
+  - name: info
+  - name: stamp

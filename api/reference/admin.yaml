@@ -1,0 +1,44 @@
+openapi: 3.1.0
+x-stoplight:
+  id: pozpaz2dx16lt
+info:
+  title: admin
+  version: '1.0'
+  description: stamp system api for admin
+  contact:
+    name: Osamu Mitsuhashi
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /store:
+    get:
+      summary: get-store-info
+      tags:
+        - info
+      responses:
+        '200':
+          description: OK
+      operationId: get-store
+      description: get store info
+    put:
+      summary: update-store-info
+      tags:
+        - info
+      responses:
+        '204':
+          description: No Content
+      operationId: put-store
+      description: update store info
+    post:
+      summary: add-new-store
+      tags:
+        - info
+      responses:
+        '201':
+          description: Created
+      operationId: post-store
+      description: create store for using this system
+components:
+  schemas: {}
+tags:
+  - name: info
